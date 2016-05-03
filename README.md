@@ -1,11 +1,11 @@
 # Jekyll Boilerplate
 Jekyll boilerplate is a starter kit for Jekyll themes. It uses my preferred CSS framework and Gulp tasks.
 
-The repo is setup with a gulpfile if you want to use [Gulp](http://gulpjs.com/). The `/dev` directory is where your Sass and pre processed JavaScript will live. If you prefer not to use Sass or Gulp, you'll need to manually move all the CSS from the .scss files to a styles.css file in the root directory.
+The repo is setup with a gulpfile to load _config-dev.yml instad of your production config file while your building your theme. It also watches the _site directory for changes and refreshes the browser to save you time.
 
 I wrote a blog post about [how I build custom Genesis child themes](http://bradonomics.com/genesis-boilerplate/). The notes in that post are very applicable to this repo.
 
-The install scrip in that post is only applicable to the Genesis Boilerplate repo. You can find the Jekyll Boilerplate install script here:
+The install scrip in that post is only applicable to the Genesis Boilerplate repo. You can find the Jekyll Boilerplate install script here: [https://gist.github.com/bradonomics/174b93261ffb287a390d408ac2128ec0](https://gist.github.com/bradonomics/174b93261ffb287a390d408ac2128ec0)
 
 ## Getting Started
 
