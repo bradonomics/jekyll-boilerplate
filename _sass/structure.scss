@@ -1,0 +1,81 @@
+/* Structure and Layout
+-------------------------------------------------- */
+.site-inner {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 1000px) {
+  .site-inner {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .site-inner {
+    max-width: 1160px;
+  }
+}
+
+main {
+  float: left;
+  width: 100%;
+  flex: 1
+}
+@media (min-width: 1000px) {
+  main {
+    width: 620px;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    width: 760px;
+  }
+}
+
+.title-area,
+.entry-header,
+.entry-footer,
+.archive-title,
+.entry-comments,
+.comment-respond {
+  max-width: 760px;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .title-area,
+  .entry-header,
+  .entry-footer,
+  .archive-title,
+  .entry-comments,
+  .comment-respond  {
+    max-width: none;
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 750px) {
+  .wrap {
+    max-width: 760px;
+  }
+}
+@media (min-width: 1000px) {
+  .wrap {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap {
+    max-width: 1160px;
+  }
+}
+
+/* wrap inside entry-content; mostly for iframe embeds */
+.entry-content .wrap {
+  max-width: 760px;
+}

@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }}{% elsif page.headline %}{{ page.headline }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Do not forget to remove the tag below once the site is ready to go live. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:title" property="og:title" content="{% if page.title %}{{ page.title }}{% elsif page.headline %}{{ page.headline }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+  <meta name="twitter:image" property="og:image" content="{% if page.og-image %}{{ site.url }}/images/{{ page.og-image }}{% elsif page.featured-image %}{{ site.url }}/images/{{ page.featured-image }}{% else %}{{ site.url }}/images/default.jpg{% endif %}">
+  <link rel="author" href="{{ site.google-plus }}">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="{{ site.url }}/css/style.css">
+</head>

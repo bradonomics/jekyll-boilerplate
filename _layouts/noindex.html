@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US">
+
+{% include head-noindex.html %}
+
+<body{% if layout.type %} class="{{ layout.type }}"{% endif %} itemscope itemtype="http://schema.org/WebPage">
+
+  {% include header.html %}
+
+  {{ content }}
+
+  {% include sidebar.html %}
+
+  {% include footer.html %}
+
+  {% include analytics.html %}
+
+</body>
+</html>

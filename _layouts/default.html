@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US">
+
+{% include head.html %}
+
+<body {% if page.url == '/' %}class="home"{% elsif layout.type %}class="{{ layout.type }}"{% endif %} itemscope itemtype="http://schema.org/WebPage">
+
+{% include header.html %}
+
+{% include navigation.html %}
+
+<div class="site-inner">
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  {% include sidebar.html %}
+
+</div>
+
+{% include footer.html %}
+
+{% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
+
+</body>
+</html>

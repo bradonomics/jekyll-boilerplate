@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+  <header class="entry-header">
+    <h1 class="entry-title" itemprop="headline">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+  </header>
+
+  <div class="entry-content" itemprop="text">
+    {{ content }}
+  </div>
+
+  <footer class="entry-footer">
+    <p class="entry-meta">
+      {% include post-time.html %}
+      {% include post-categories.html %}
+    </p>
+  </footer>
+
+</article>

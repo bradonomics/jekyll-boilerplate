@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="alternate" type="application/rss+xml" title="Bradonomics" href="http://feeds.feedburner.com/bradonomics">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Bitter:400,700|Oswald|Merriweather:400,700,400italic">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/css/style.css">
+</head>
