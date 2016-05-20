@@ -136,12 +136,12 @@ p {
 /* Links
 -------------------------------------------------- */
 a {
-  color: $link-color;
+  color: $primary-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: $link-color-hover;
+  color: $primary-color-hover;
 }
 
 
@@ -243,7 +243,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid $button-background-color;
   outline: 0;
 }
 
