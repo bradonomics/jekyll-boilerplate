@@ -1,24 +1,24 @@
-var gulp        = require('gulp');
-var shell       = require('gulp-shell');
-var browserSync = require('browser-sync').create();
+var gulp        = require('gulp'),
+    shell       = require('gulp-shell'),
+    browserSync = require('browser-sync').create();
 
 
-//* Run Jekyll build command
-gulp.task('build', shell.task(['jekyll build --config _config-dev.yml --watch']));
+//* Run Jekyll build and serve commands
+gulp.task('build', shell.task(['jekyll build --config _config-dev.yml --incremental --watch']));
 
 
-//* Serve with browserSync
-gulp.task('serve', function () {
-    browserSync.init({
-      server: {
-        baseDir: '_site/'
-      },
-    browser: 'firefox'
-    });
-    //* Reload page when the site rebuilds.
-    gulp.watch('_site/**/*.*').on('change', reload);
+//* BrowserSync
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: {
+      baseDir: '_site/'
+    },
+    browser: 'firefox',
+    reloadDelay: 300
+  });
+  gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
 
-//* Default task
-gulp.task('default', ['build', 'serve']);
+// Default task (build and serve)
+gulp.task('default', ['build', 'browser-sync']);
