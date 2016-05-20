@@ -1,11 +1,10 @@
 ---
-layout: page
 title: About Jekyll Boilerplate
 headline: About Jekyll Boilerplate
-sub-heading:
+sub_heading:
 description:
-featured-image:
-og-image:
+featured_image_path:
+facebook_image_path:
 permalink: /about/
 ---
 

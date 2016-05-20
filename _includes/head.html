@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip | truncate: 160 }}{% endif %}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ site.twitter }}">
   <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta name="twitter:title" property="og:title" content="{% if page.title %}{{ page.title }}{% elsif page.headline %}{{ page.headline }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-  <meta name="twitter:image" property="og:image" content="{% if page.og-image %}{{ site.url }}/images/{{ page.og-image }}{% elsif page.featured-image %}{{ site.url }}/images/{{ page.featured-image }}{% else %}{{ site.url }}/images/default.jpg{% endif %}">
+  <meta name="twitter:description" property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip | truncate: 160 }}{% endif %}">
+  <meta name="twitter:image" property="og:image" content="{% if page.facebook_image_path %}{{ page.facebook_image_path }}{% elsif page.featured_image_path %}{{ page.featured_image_path }}{% else %}{{ site.url }}/images/default.jpg{% endif %}">
   <link rel="author" href="{{ site.google-plus }}">
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">

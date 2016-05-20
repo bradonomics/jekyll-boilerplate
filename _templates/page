@@ -1,10 +1,8 @@
 ---
-layout: page
 title:
 headline:
-sub-heading:
 description:
-featured-image:
-og-image:
+featured_image_path:
+facebook_image_path:
 permalink:
 ---
