@@ -7,6 +7,7 @@ twitter: "@bradonomics" # Site Twitter account or main author's Twitter accout i
 url: http://localhost:3000
 
 # Jekyll configuration
+version: 3.0.3
 permalink: /:title/
 markdown: kramdown
 kramdown:
@@ -16,25 +17,22 @@ encoding: utf-8
 sass:
   sass_dir: _sass
   # style: compressed
-
 defaults:
 - scope:
     path: ""
     type: posts
   values:
     layout: post
-
 - scope:
     path: ""
     type: pages
   values:
     layout: page
-
 gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
 
-include: ["_pages"]
+# include: ["_pages"]
 
 exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "gulpfile.js", "package.json"]
