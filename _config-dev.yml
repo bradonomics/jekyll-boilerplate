@@ -1,38 +1,6 @@
 # Site settings
-title: Jekyll Boilerplate
-description: A rad boilerplate for creating new websites with Jekyll, The static website generator.
-google-plus: https://plus.google.com/103163741383795666289 # For Google Authorship (if this is to be a multi-author site, an override will need to be added to post front matter.)
-twitter: "@bradonomics" # Site Twitter account or main author's Twitter accout if there is no dedicated site account.
-# baseurl: ""
 url: http://localhost:3000
 
-# Jekyll configuration
-version: 3.0.3
-permalink: /:title/
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-encoding: utf-8
+# SASS settings
 sass:
-  sass_dir: _sass
-  # style: compressed
-defaults:
-- scope:
-    path: ""
-    type: posts
-  values:
-    layout: post
-- scope:
-    path: ""
-    type: pages
-  values:
-    layout: page
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-
-# include: ["_pages"]
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "gulpfile.js", "package.json"]
+  style: expanded
