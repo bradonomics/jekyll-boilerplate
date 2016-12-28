@@ -17,11 +17,6 @@ permission notices:
   Jekyll - http://jekyllrb.com/<br>
   Copyright (C) 2008-2016 Tom Preston-Werner<br>
 
-and
-
-  Skeleton - http://getskeleton.com<br>
-  Copyright (C) 2011-2014 Dave Gamache
-
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
                     GNU GENERAL PUBLIC LICENSE
