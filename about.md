@@ -1,7 +1,5 @@
 ---
 title: About Jekyll Boilerplate
-headline: About Jekyll Boilerplate
-sub_heading:
 description:
 featured_image_path:
 facebook_image_path:

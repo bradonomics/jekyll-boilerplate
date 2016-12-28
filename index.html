@@ -1,7 +1,6 @@
 ---
 layout: default
 title:
-headline:
 description:
 featured_image_path:
 facebook_image_path:
@@ -10,7 +9,7 @@ permalink: /
 <article class="page entry" itemscope itemtype="http://schema.org/CreativeWork">
 
   <header class="entry-header">
-    <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+    <h1 class="entry-title">{{ page.title }}</h1>
   </header>
 
   <section class="">
