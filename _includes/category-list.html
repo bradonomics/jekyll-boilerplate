@@ -1,0 +1,7 @@
+{% if page.categories %}
+  <span class="entry-categories">Filed Under:
+    {% for category in page.categories %}
+      <a href="/category/{{ category | slugify }}/" rel="category">{{ category | downcase }}</a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </span>
+{% endif %}
