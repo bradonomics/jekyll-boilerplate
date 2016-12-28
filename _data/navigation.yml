@@ -1,4 +1,12 @@
-- title: About
-  url: /about/
-- title: Blog
-  url: /blog/
+menu-items:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+    sub-menu-items:
+      - title: Contact
+        url: /contact/
+  - title: Portfolio
+    url: /portfolio/
+  - title: Blog
+    url: /blog/
