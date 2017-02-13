@@ -1,4 +1,5 @@
 # Site settings
+title: Jekyll Boilerplate
 url: http://localhost:3000
 
 # SASS settings

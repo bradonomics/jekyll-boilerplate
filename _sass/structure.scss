@@ -1,81 +1,46 @@
-/* Structure and Layout
--------------------------------------------------- */
 .site-inner {
-  display: flex;
-  flex: 1;
+  max-width: 800px;
   margin: 0 auto;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-@media (min-width: 1000px) {
-  .site-inner {
+  padding-top: 40px;
+	clear: both;
+	word-wrap: break-word;
+  @media (min-width: 1000px) {
     max-width: 960px;
   }
-}
-@media (min-width: 1200px) {
-  .site-inner {
-    max-width: 1160px;
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1340px) {
+    max-width: 1280px;
   }
 }
 
-main {
+.content {
   float: left;
   width: 100%;
-  flex: 1
-}
-@media (min-width: 1000px) {
-  main {
+  font-size: 16px;
+  @media (min-width: 1000px) {
     width: 620px;
   }
-}
-@media (min-width: 1200px) {
-  main {
-    width: 760px;
+  @media (min-width: 1200px) {
+    width: 800px;
   }
-}
-
-.title-area,
-.entry-header,
-.entry-footer,
-.archive-title,
-.entry-comments,
-.comment-respond {
-  max-width: 760px;
-  margin: 0 auto;
-}
-@media (min-width: 1000px) {
-  .title-area,
-  .entry-header,
-  .entry-footer,
-  .archive-title,
-  .entry-comments,
-  .comment-respond  {
-    max-width: none;
+  @media (min-width: 1340px) {
+    width: 880px;
   }
 }
 
 .wrap {
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
-}
-@media (min-width: 750px) {
-  .wrap {
-    max-width: 760px;
-  }
-}
-@media (min-width: 1000px) {
-  .wrap {
+  @media (min-width: 1000px) {
     max-width: 960px;
   }
-}
-@media (min-width: 1200px) {
-  .wrap {
-    max-width: 1160px;
+  @media (min-width: 1200px) {
+    max-width: 1140px;
   }
-}
-
-/* wrap inside entry-content; mostly for iframe embeds */
-.entry-content .wrap {
-  max-width: 760px;
+  @media (min-width: 1340px) {
+    max-width: 1280px;
+  }
 }

@@ -2,16 +2,16 @@
   <div class="wrap">
 
     <section class="widget">
-      <div class="widget-wrap">
-
-        <h4 class="widget-title">Categories</h4>
-        
-        <ul>
-          <li class="cat-item cat-item-1"><a href="#">Category</a></li>
-        </ul>
-
-      </div>
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </section>
+
 
   </div>
 </aside>

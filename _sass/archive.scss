@@ -1,21 +1,21 @@
-.archive .entry-content > a {
-  border: 0;
+.archive-title {
+  text-transform: capitalize;
 }
+
+// .archive .entry-content > a {
+//   border: 0;
+// }
 
 .archive-description {
   margin-bottom: 120px;
 }
 
-.archive .has-post-thumbnail .entry-content > a {
-  border: 0;
+.archive .entry {
+  position: relative;
+  margin-bottom: 40px;
 }
 
 .archive .entry-title {
   margin-bottom: 1rem;
   font-size: 40px;
-}
-
-.archive .entry {
-  position: relative;
-  margin-bottom: 40px;
 }

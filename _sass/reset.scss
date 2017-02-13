@@ -1,7 +1,8 @@
 /* Box Sizing
 -------------------------------------------------- */
 *,
-input[type='search'] {
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,14 +11,11 @@ input[type='search'] {
 
 /* Float Clearing
 -------------------------------------------------- */
-.clearfix:before,
 .entry:before,
-.entry-content:before,
 .footer-widgets:before,
 .nav-primary:before,
 .nav-secondary:before,
 .pagination:before,
-.site-container:before,
 .site-footer:before,
 .site-header:before,
 .page-header:before,
@@ -28,14 +26,11 @@ input[type='search'] {
   content: ' ';
 }
 
-.clearfix:after,
 .entry:after,
-.entry-content:after,
 .footer-widgets:after,
 .nav-primary:after,
 .nav-secondary:after,
 .pagination:after,
-.site-container:after,
 .site-footer:after,
 .site-header:after,
 .page-header:after,

@@ -4,9 +4,9 @@ menu-items:
   - title: About
     url: /about/
     sub-menu-items:
-      - title: Contact
-        url: /contact/
-  - title: Portfolio
-    url: /portfolio/
+      - title: Typography
+        url: /typography/
+      - title: Grid
+        url: /grid/
   - title: Blog
     url: /blog/

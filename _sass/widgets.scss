@@ -1,0 +1,17 @@
+.widget {
+  word-wrap: break-word;
+
+  ol > li {
+    padding-left: 20px;
+    text-indent: -20px;
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+  li li {
+    margin: 0 0 0 30px;
+    padding: 0;
+    border: 0;
+  }
+
+}

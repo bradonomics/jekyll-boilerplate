@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
+
 <article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
 
   <header class="entry-header">
     <h1 class="entry-title" itemprop="headline">{{ page.title }}</h1>
-    <p class="entry-meta"><time class="entry-time" itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    <p class="entry-meta">{% include page-time.html %}</p>
   </header>
 
   <div class="entry-content" itemprop="text">
