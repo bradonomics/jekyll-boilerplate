@@ -1,97 +1,54 @@
-.container {
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.no-gutters > .col,
-.no-gutters > [class*='col-'] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.column {
-  position: relative;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 100%;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-}
-
 .one-half {
   @media (min-width: 550px) {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
+    float: left;
+    width: 48%;
+    margin-left: 4%;
   }
 }
 
 .one-third {
   @media (min-width: 750px) {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.333333%;
-        -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    float: left;
+    width: 30.6666666667%;
+    margin-left: 4%;
   }
 }
 
 .two-thirds {
   @media (min-width: 750px) {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 66.666667%;
-        -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+    float: left;
+    width: 65.3333333333%;
+    margin-left: 4%;
   }
 }
 
 .one-fourth {
   @media (min-width: 550px) {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
+    float: left;
+    width: 48%;
+    margin-left: 4%;
   }
   @media (min-width: 1000px) {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-    max-width: 25%;
+    width: 22%;
+  }
+}
+
+.three-fourths {
+  @media (min-width: 1000px) {
+    float: left;
+    width: 74%;
+    margin-left: 4%;
+  }
+}
+
+.first {
+  margin-left: 0;
+  clear: both;
+}
+
+.first-at-half {
+  margin-left: 0;
+  @media (min-width: 1000px) {
+    margin-left: 4%;
   }
 }

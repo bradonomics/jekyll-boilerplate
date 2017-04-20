@@ -9,13 +9,14 @@ layout: compress
 
   <body {% if page.url == '/' %}class="home" {% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive" {% endif %}itemscope itemtype="http://schema.org/WebPage">
 
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
+    <div class="site-container">
 
-    {% include header.html %}
+      <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
 
-    <div class="site-inner">
+      {% include header.html %}
+
 
       <main class="content">
         {{ content }}
@@ -23,12 +24,13 @@ layout: compress
 
       {% if page.sidebar_option == 'sidebar' %}{% include sidebar.html %}{% endif %}
 
+
+      {% include footer-widgets.html %}
+      {% include footer.html %}
+
+      <script async src='{{ site.url }}/js/theme.min.js'></script>
+
     </div>
-
-    {% include footer-widgets.html %}
-    {% include footer.html %}
-
-  <script async src='{{ site.url }}/js/theme.min.js'></script>
 
   </body>
 

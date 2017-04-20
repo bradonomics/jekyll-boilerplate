@@ -1,10 +1,4 @@
 .site-header {
-  padding: 0 20px;
-  background-color: #fff;
-
-  .wrap {
-    padding: 0;
-  }
 
   .widget-area {
     width: 100%;
@@ -22,22 +16,14 @@
 
 .title-area {
   float: left;
-  width: 100%;
   padding: 10px 0;
   text-align: center;
   @media (min-width: 750px) {
     text-align: left;
   }
-  @media (min-width: 1000px) {
-    padding: 10px 20px;
-  }
   @media (min-width: 1200px) {
     max-width: 360px;
   }
-}
-
-.header-full-width .title-area {
-  width: 100%;
 }
 
 .site-title {

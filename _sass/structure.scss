@@ -1,9 +1,11 @@
-.site-inner {
+.site-container {
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 40px;
-	clear: both;
-	word-wrap: break-word;
+  padding: 0 20px;
+
+  // padding-top: 40px;
+	// clear: both;
+	// word-wrap: break-word;
   @media (min-width: 1000px) {
     max-width: 960px;
   }
@@ -18,7 +20,7 @@
 .content {
   float: left;
   width: 100%;
-  font-size: 16px;
+  padding-right: 20px;
   @media (min-width: 1000px) {
     width: 620px;
   }
@@ -30,17 +32,17 @@
   }
 }
 
-.wrap {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-  @media (min-width: 1000px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1340px) {
-    max-width: 1280px;
-  }
-}
+// .wrap {
+//   max-width: 800px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+//   @media (min-width: 1000px) {
+//     max-width: 960px;
+//   }
+//   @media (min-width: 1200px) {
+//     max-width: 1140px;
+//   }
+//   @media (min-width: 1340px) {
+//     max-width: 1280px;
+//   }
+// }
