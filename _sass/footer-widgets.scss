@@ -1,6 +1,6 @@
 .footer-widgets {
   padding-top: 40px;
-  clear: both;
+  // clear: both;
 
   .widget {
     margin-bottom: 40px;
@@ -16,41 +16,41 @@
 
 }
 
-.footer-widget-1 {
-  @media (min-width: 550px) {
-    float: left;
-    width: 48%;
-    margin-left: 0;
-    clear: both;
-  }
-  @media (min-width: 1000px) {
-    width: 22%;
-  }
-}
+// .footer-widget-1 {
+//   @media (min-width: 550px) {
+//     float: left;
+//     width: 48%;
+//     margin-left: 0;
+//     clear: both;
+//   }
+//   @media (min-width: 1000px) {
+//     width: 22%;
+//   }
+// }
 
-.footer-widget-2,
-.footer-widget-4 {
-  @media (min-width: 550px) {
-    float: left;
-    width: 48%;
-    margin-left: 4%;
-  }
-  @media (min-width: 1000px) {
-    width: 22%;
-  }
-}
+// .footer-widget-2,
+// .footer-widget-4 {
+//   @media (min-width: 550px) {
+//     float: left;
+//     width: 48%;
+//     margin-left: 4%;
+//   }
+//   @media (min-width: 1000px) {
+//     width: 22%;
+//   }
+// }
 
-.footer-widget-3 {
-  @media (min-width: 550px) {
-    float: left;
-    width: 48%;
-    margin-left: 0;
-  }
-  @media (min-width: 1000px) {
-    width: 22%;
-    margin-left: 4%;
-  }
-}
+// .footer-widget-3 {
+//   @media (min-width: 550px) {
+//     float: left;
+//     width: 48%;
+//     margin-left: 0;
+//   }
+//   @media (min-width: 1000px) {
+//     width: 22%;
+//     margin-left: 4%;
+//   }
+// }
 
 .social-icons {
 

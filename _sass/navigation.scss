@@ -129,7 +129,8 @@
   text-indent: 9999px;
   color: transparent;
   background: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   overflow: hidden;
   visibility: visible;
   @media (min-width: 800px) {
@@ -138,7 +139,8 @@
   }
 
   &:hover {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 
   &:before {
@@ -174,7 +176,8 @@
   }
 
   &:hover {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 
   &:before {

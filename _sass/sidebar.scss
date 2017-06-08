@@ -1,11 +1,13 @@
 .sidebar {
   width: 100%;
   @media (min-width: 1000px) {
-    float: right;
-    width: 300px;
+    // float: right;
+    // width: 300px;
+    flex-basis: 300px;
   }
   @media (min-width: 1340px) {
-    width: 360px;
+    // width: 360px;
+    flex-basis: 360px;
   }
 }
 
