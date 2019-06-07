@@ -1,60 +1,40 @@
-.nav-primary {
+.navigation {
   display: none;
-  width: 100%;
-  @media (min-width: 800px) {
-    display: block;
-    text-align: right;
+  transition: height .25s ease;
+  @include breakpoint(md) {
+    display: flex;
   }
+
+  &.open {
+    display: flex;
+  }
+
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 .menu-item {
-	display: inline-block;
   position: relative;
-  width: 100%;
-	list-style: none;
-  @media (min-width: 800px) {
-    width: inherit;
-  }
+  display: inline-block;
+  margin: 0;
+  list-style: none;
 
   a {
-    display: block;
-    position: relative;
-  	margin: 0;
-  	padding: 10px 0;
-    border: 0;
-    font-weight: 400;
-    letter-spacing: .05em;
-  	text-transform: uppercase;
-    color: #333;
-    @media (min-width: 800px) {
-      margin: 0 0 0 24px;
-      padding: 15px 0;
-      font-size: 12px;
-    }
-    @media (min-width: 1000px) {
-      margin: -2px 0 0 36px;
-    }
+    color: $body-text-color;
   }
 
   a:hover,
   &.active > a {
-    text-decoration: none;
     color: $primary-color;
-    opacity: 1;
-  }
-
-  &.highlight a {
-    @media (min-width: 800px) {
-      padding: 10px 20px;
-      border: 1px solid #333;
-      border-radius: 2px;
-      line-height: 1;
-      background: transparent;
-    }
+    text-decoration: none;
   }
 
   &:hover .sub-menu {
-    @media (min-width: 800px) {
+    @include breakpoint(md) {
       display: block;
     }
   }
@@ -63,50 +43,50 @@
 
 .sub-menu {
   display: none;
-  width: calc(100% - 24px);
-	margin: 0 0 0 24px;
-  @media (min-width: 800px) {
+  width: calc(100% - 1.2rem);
+  margin: 0 0 0 1.2rem;
+  @include breakpoint(md) {
     position: absolute;
-		width: 180px;
-    margin-top: -12px;
-    border-radius: 2px;
-		text-align: left;
-    background: #333;
     z-index: 99;
+    width: 180px;
+    margin-top: -12px;
+    text-align: left;
+    background: $body-text-color;
+    border-radius: 2px;
   }
 
   .menu-item {
-    @media (min-width: 800px) {
+    @include breakpoint(md) {
       width: 100%;
     }
 
     a {
-      @media (min-width: 800px) {
+      @include breakpoint(md) {
         width: 100%;
         margin: 0;
         padding: 8px 16px;
-        border-top: 0;
         color: #fff;
+        border-top: 0;
       }
     }
 
     a:hover,
     &.active > a {
-      text-decoration: none;
       color: $primary-color;
+      text-decoration: none;
       opacity: 1;
     }
 
   }
 
   .menu-item:first-child > a {
-    @media (min-width: 800px) {
+    @include breakpoint(md) {
       padding-top: 16px;
     }
   }
 
   .menu-item:last-child a {
-    @media (min-width: 800px) {
+    @include breakpoint(md) {
       padding-bottom: 12px;
     }
   }
@@ -114,78 +94,55 @@
 }
 
 
-/* Responsive Menu
--------------------------------------------------- */
-
-.menu-toggle {
-  display: block;
-  position: relative;
-  float: right;
-  width: 50px;
-  height: 50px;
-  margin-top: -5px;
-  margin-right: -12px;
-  padding: 6px 2px 0;
-  text-indent: 9999px;
-  color: transparent;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  overflow: hidden;
-  visibility: visible;
-  @media (min-width: 800px) {
-  	display: none;
-  	visibility: hidden;
+// Responsive Menu
+.responsive-menu-icon {
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: .8rem;
+  cursor: pointer;
+  @include breakpoint(md) {
+    display: none;
   }
 
-  &:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-
-  &:before {
+  &::after {
     display: inline-block;
-    position: absolute;
-    top: 3px;
-    right: 13px;
-    margin: 0 auto;
-    padding: 0;
-    font: normal 30px/1.5 'FontAwesome';
-    color: #333;
-    content: '\f0c9';
+    width: 1rem;
+    margin: 0 0 0 10px;
+    padding-bottom: 3px;
+    content: '';
+    border-top: 7px double;
+    border-top-width: 9px;
+    border-bottom: 2px solid;
+    border-bottom-width: 3px;
   }
-
-  &.activated::before {
-    right: 16px;
-    content: '\f00d';
-  }
-
 }
 
 .sub-menu-toggle {
-  display: block;
   position: absolute;
   top: 10px;
   right: 0;
+  display: block;
   padding: 6px 2px 0;
-  background: transparent;
   visibility: visible;
-  @media (min-width: 800px) {
-  	display: none;
-  	visibility: hidden;
+  background: transparent;
+  @include breakpoint(md) {
+    display: none;
+    visibility: hidden;
   }
 
   &:hover {
-		-webkit-box-shadow: none;
-		        box-shadow: none;
+    box-shadow: none;
 	}
 
-  &:before {
+  &::before {
     padding: 14px 5px;
     font: normal 16px/1 'FontAwesome';
-    color: #333;
-    content: '\f078';
+    color: $body-text-color;
     cursor: pointer;
+    content: '\f078';
   }
 
   &.activated::before {

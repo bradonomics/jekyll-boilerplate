@@ -8,11 +8,11 @@ input[type='submit'],
 .button {
   display: inline-block;
   width: auto;
-  padding: 14px 30px;
+  padding: $spacer * .7 $spacer * 1.5;
   border: 0;
   border-radius: 2px;
   outline: none;
-  font-size: 16px;
+  font-size: $font-size-base;
   font-weight: 700;
   line-height: 1.612;
   text-align: center;
@@ -20,16 +20,10 @@ input[type='submit'],
   white-space: nowrap;
   color: $button-text-color;
   background-color: $button-background-color;
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   box-shadow: none;
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 
   &:hover {
     text-decoration: none;
@@ -42,16 +36,12 @@ input[type='submit'],
 
 .button:after,
 .button:before {
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .button.small {
-  padding: 8px 20px;
-  font-size: 14px;
+  padding: $spacer *.4 $spacer;
+  font-size: $font-size-base * .7;
 }
 
 .button.light {
@@ -89,30 +79,30 @@ input[type='submit'],
   background: #fff;
 }
 
-.button.arrow-left:before,
-.button.arrow-right:after {
+.button.arrow-left::before,
+.button.arrow-right::after {
   font-family: 'FontAwesome';
   vertical-align: top;
 }
 
-.button.arrow-right:after {
-  margin-left: 8px;
+.button.arrow-right::after {
+  margin-left: $spacer * .4;
   content: '\f061';
 }
 
-.button.arrow-right:hover:after {
-  margin-right: -4px;
-  margin-left: 12px;
+.button.arrow-right:hover::after {
+  margin-right: -.2rem;
+  margin-left: $spacer * .6;
 }
 
-.button.arrow-left:before {
-  margin-right: 8px;
+.button.arrow-left::before {
+  margin-right: $spacer * .4;
   content: '\f060';
 }
 
-.button.arrow-left:hover:before {
-  margin-right: 12px;
-  margin-left: -4px;
+.button.arrow-left:hover::before {
+  margin-right: $spacer * .6;
+  margin-left: -.2rem;
 }
 
 input[type='search']::-webkit-search-cancel-button,

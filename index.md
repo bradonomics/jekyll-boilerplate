@@ -2,8 +2,8 @@
 title: Jekyll Boilerplate
 description:
 sidebar_option: sidebar
-featured_image_path:
-facebook_image_path:
+featured_image:
+facebook_image:
 ---
 
-Jekyll Boilerplate is a starter kit for Jekyll themes. It uses my prefered CSS framework and Gulp tasks.
+Jekyll Boilerplate is a starter kit for Jekyll themes.

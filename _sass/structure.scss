@@ -1,43 +1,61 @@
 .site-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 40rem;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 20px;
-  @media (min-width: 1000px) {
-    max-width: 960px;
+  padding: 0 1rem;
+  @include breakpoint(lg) {
+    max-width: 48rem;
   }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
+  @include breakpoint(xl) {
+    max-width: 57rem;
   }
-  @media (min-width: 1340px) {
-    max-width: 1280px;
+  @include breakpoint(xxl) {
+    max-width: 64rem;
   }
 }
 
 .site-inner {
+  @extend %row;
   flex: 1 0 auto;
-  @media (min-width: 1000px) {
-    display: flex;
-  }
 }
 
 .content {
+  position: relative;
   width: 100%;
-  margin: 0 auto;
-  @media (min-width: 1000px) {
-    // float: left;
-    // width: 620px;
-    flex-basis: 620px;
-    padding-right: 20px;
+  @include breakpoint(lg) {
+    flex: 0 0 30rem;
+    max-width: 30rem;
   }
-  @media (min-width: 1200px) {
-    // width: 800px;
-    flex-basis: 800px;
+  @include breakpoint(xl) {
+    flex: 0 0 39rem;
+    max-width: 39rem;
   }
-  @media (min-width: 1340px) {
-    // width: 880px;
-    flex-basis: 880px;
+  @include breakpoint(xxl) {
+    flex: 0 0 43rem;
+    max-width: 43rem;
+  }
+
+  &.full-width {
+    margin: 0 auto;
+    @include breakpoint(lg) {
+      flex: 0 0 43rem;
+      max-width: 43rem;
+    }
+  }
+
+}
+
+.sidebar {
+  position: relative;
+  width: 100%;
+  @include breakpoint(lg) {
+    flex: 0 0 14rem;
+    max-width: 14rem;
+  }
+  @include breakpoint(xxl) {
+    flex: 0 0 17rem;
+    max-width: 17rem;
   }
 }

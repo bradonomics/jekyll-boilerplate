@@ -1,5 +1,5 @@
 .pagination {
-  margin-top: 40px;
+  margin-top: $spacer * 2;
   text-align: center;
 
   ul {
@@ -10,14 +10,14 @@
   li {
     display: block;
     float: left;
-    margin: 2px;
-    border-radius: 2px;
+    margin: .1rem;
+    border-radius: .1rem;
     overflow: hidden;
     list-style-type: none;
 
     a {
     display: block;
-    padding: 8px 16px;
+    padding: .4rem .8rem;
     border: 0;
     text-decoration: none;
     }
@@ -31,10 +31,10 @@
     &.active {
       display: block;
       float: left;
-      margin: 2px;
-      padding: 8px 16px;
+      margin: .1rem;
+      padding: .4rem .8rem;
       border: 0;
-      border-radius: 2px;
+      border-radius: .1rem;
       text-decoration: none;
       color: #fff;
       background: $primary-color;

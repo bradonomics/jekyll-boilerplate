@@ -1,25 +1,25 @@
----
-layout: compress
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
   {% include head.html %}
 
-  <body {% if page.url == '/' %}class="home" {% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive" {% endif %}itemscope itemtype="http://schema.org/WebPage">
+  <body {% if page.url == '/' %}class="home" {% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive" {% endif %}>
 
     <div class="site-container">
 
-      <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-      <![endif]-->
+      <header class="site-header">
 
-      {% include header.html %}
+          <div class="title-area">
+            <p class="site-title"><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></p>
+          </div>
+
+          {% include navigation.html %}
+
+      </header>
 
       <div class="site-inner">
 
-        <main class="content">
+        <main class="content{% unless page.sidebar_option == 'sidebar' %} full-width{% endunless %}">
           {{ content }}
         </main>
 
@@ -28,13 +28,15 @@ layout: compress
       </div>
 
       {% include footer-widgets.html %}
-      {% include footer.html %}
 
-      <!-- <script async src='{{ site.url }}/js/theme.min.js'></script> -->
-      <script async src='{{ site.url }}/js/jquery-2.2.4.min.js'></script>
-      <script async src='{{ site.url }}/js/responsive-menu.js'></script>
+      <footer class="site-footer">
+        <p><a href="{{ site.url }}">{{ site.title }}</a> &copy; {{ site.time | date: "%Y" }} &middot; <a href="http://github.com/bradonomics/jekyll-boilerplate/" rel="nofollow">Built using Jekyll Boilerplate</a></p>
+      </footer>
 
     </div>
+
+    {% include scripts.html %}
+    {% if page.lightbox %}{% include photo-swipe.html %}{% endif %}
 
   </body>
 

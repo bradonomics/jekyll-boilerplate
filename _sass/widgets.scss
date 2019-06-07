@@ -2,14 +2,14 @@
   word-wrap: break-word;
 
   ol > li {
-    padding-left: 20px;
-    text-indent: -20px;
-    list-style-type: decimal;
+    padding-left: 1rem;
+    text-indent: -1rem;
     list-style-position: inside;
+    list-style-type: decimal;
   }
 
   li li {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 1.5rem;
     padding: 0;
     border: 0;
   }

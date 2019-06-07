@@ -1,8 +1,8 @@
 ---
 title: About Jekyll Boilerplate
 description:
-featured_image_path:
-facebook_image_path:
+featured_image:
+facebook_image:
 permalink: /about/
 ---
 

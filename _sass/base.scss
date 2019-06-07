@@ -1,28 +1,27 @@
 *,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
-  font-size: 62.5%;
+  font-size: 20px;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
 body {
+  margin: 0;
   font-family: $body-font;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: $body-text-color;
   text-rendering: optimizeLegibility;
-  color: #222;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: $spacer;
   word-break: break-word;
 }
 
@@ -30,8 +29,8 @@ p {
 /* Links
 -------------------------------------------------- */
 a {
-  text-decoration: none;
   color: $primary-color;
+  text-decoration: none;
 
   &:hover {
     color: $primary-color-hover;
@@ -44,9 +43,7 @@ a {
 -------------------------------------------------- */
 ol,
 ul {
-  margin-top: 0;
-  margin-bottom: 25px;
-  margin-left: 20px;
+  margin: 0 0 $spacer $spacer;
   -webkit-padding-start: 0;
 }
 
@@ -62,38 +59,38 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 15px 0 15px 30px;
+  margin: $spacer 0 $spacer $spacer * 2;
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: $spacer / 2;
 }
 
 
 /* Quotes
 -------------------------------------------------- */
 blockquote {
-  max-width: 680px;
-  margin: 16px 0;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  border-left: 5px solid #e5e5e5;
+  max-width: 34rem;
+  margin: $spacer 0;
+  padding-top: $spacer / 2;
+  padding-right: $spacer;
+  padding-bottom: $spacer / 2;
+  padding-left: $spacer * 2;
+  border-left: .25em solid #e5e5e5;
 }
-@media (min-width: 400px) {
+@include breakpoint(sm) {
   blockquote {
-    padding-right: 60px;
+    padding-right: $spacer * 3;
   }
 }
 
 blockquote::before {
-  display: block;
   position: relative;
-  top: -10px;
-  left: -20px;
+  top: -.5rem;
+  left: -1rem;
+  display: block;
   height: 0;
-  font-size: 40px;
+  font-size: $h3-font-size;
   content: '“';
 }
 
@@ -122,19 +119,4 @@ blockquote p {
 ::selection {
   color: #fff;
   background-color: $primary-color;
-}
-
-
-/* Utilities
--------------------------------------------------- */
-.text-center {
-  text-align: center;
-}
-
-.right {
-  float: right;
-}
-
-.left {
-  float: left;
 }

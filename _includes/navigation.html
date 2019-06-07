@@ -1,5 +1,7 @@
-<nav class="nav-primary" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
-  <ul class="jekyll-nav-menu">
+<div class="responsive-menu-icon" id="toggle">Menu</div>
+
+<nav class="navigation" id="navigation">
+  <ul class="menu">
 
     {% for menu-item in site.data.navigation.menu-items %}
 
@@ -15,6 +17,8 @@
 
         </ul>
         {% endif %}
+
+      </li>
 
     {% endfor %}
 

@@ -2,20 +2,12 @@
   text-transform: capitalize;
 }
 
-// .archive .entry-content > a {
-//   border: 0;
-// }
-
-.archive-description {
-  margin-bottom: 120px;
-}
-
 .archive .entry {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: $spacer * 2;
 }
 
 .archive .entry-title {
   margin-bottom: 1rem;
-  font-size: 40px;
+  font-size: $h1-font-size;
 }

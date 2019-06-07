@@ -1,9 +1,9 @@
 .footer-widgets {
-  padding-top: 40px;
+  padding-top: $spacer * 2;
   // clear: both;
 
   .widget {
-    margin-bottom: 40px;
+    margin-bottom: $spacer * 2;
   }
 
   p:last-child {
@@ -17,36 +17,36 @@
 }
 
 // .footer-widget-1 {
-//   @media (min-width: 550px) {
+//   @include breakpoint(sm) {
 //     float: left;
 //     width: 48%;
 //     margin-left: 0;
 //     clear: both;
 //   }
-//   @media (min-width: 1000px) {
+//   @include breakpoint(lg) {
 //     width: 22%;
 //   }
 // }
 
 // .footer-widget-2,
 // .footer-widget-4 {
-//   @media (min-width: 550px) {
+//   @include breakpoint(sm) {
 //     float: left;
 //     width: 48%;
 //     margin-left: 4%;
 //   }
-//   @media (min-width: 1000px) {
+//   @include breakpoint(lg) {
 //     width: 22%;
 //   }
 // }
 
 // .footer-widget-3 {
-//   @media (min-width: 550px) {
+//   @include breakpoint(sm) {
 //     float: left;
 //     width: 48%;
 //     margin-left: 0;
 //   }
-//   @media (min-width: 1000px) {
+//   @include breakpoint(lg) {
 //     width: 22%;
 //     margin-left: 4%;
 //   }
@@ -55,14 +55,14 @@
 .social-icons {
 
   a {
-    border: 0;
     color: inherit;
+    border: 0;
   }
 
   li {
     float: left;
-    margin-right: 14px;
-    margin-bottom: 10px;
+    margin-right: $spacer * .7;
+    margin-bottom: $spacer * .5;
 
     // &:hover {
     //   color: $primary-color;

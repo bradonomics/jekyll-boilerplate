@@ -4,27 +4,22 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 'variables';
-@import 'normalize';
-@import 'fonts';
-@import 'fontawesome';
+@import 'mixins';
+@import 'utilities';
 @import 'base';
+@import 'typography';
+@import 'structure';
 @import 'buttons';
 @import 'forms';
 @import 'tables';
-@import 'code';
-@import 'structure';
-// @import 'grid-float';
-@import 'grid-flex';
 @import 'header';
-@import 'headings';
 @import 'navigation';
 @import 'article';
 @import 'widgets';
 @import 'images';
-@import 'home';
+@import 'pages/home';
 @import 'archive';
 @import 'pagination';
 @import 'sidebar';
-@import '404';
 @import 'footer-widgets';
 @import 'footer';

@@ -1,7 +1,6 @@
 # Site Settings
 title: Jekyll Boilerplate
 description: Boilerplate code for new Jekyll themes.
-google-plus: # For Google Authorship (if this is to be a multi-author site, an override will need to be added to post front matter.)
 url:
 
 # Jekyll Configuration
@@ -14,7 +13,6 @@ paginate_path: "/blog/page/:num/"
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
 # Sass/SCSS Settings
 sass:
@@ -32,21 +30,15 @@ defaults:
   values:
     layout: page
 
-# Frontmatter Defaults
-sidebar_options:
-  - sidebar
-  - no-sidebar
+# Autoprefixer Plugin Settings - https://github.com/vwochnik/jekyll-autoprefixer
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: true
 
 # File Handling
 # include: [_pages]
-exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json]
-
-# Plugins
-gems:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-archives
-  - jekyll-paginate
+exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]
 
 # Archives
 jekyll-archives:
@@ -56,9 +48,3 @@ jekyll-archives:
   permalinks:
     categories: '/category/:name/'
     tags: '/tag/:name/'
-
-# HTML Compression - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

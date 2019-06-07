@@ -105,40 +105,40 @@ Do It Live
 
 ## Buttons
 
-Make any link standout more when applying the `.btn` class.
+Make any link standout more when applying the `.button` class.
 
 ```html
-<a href="#" class="btn--success">Success Button</a>
+<a href="#" class="button--success">Success Button</a>
 ```
 
-[Primary Button](#){: .btn}
-[Success Button](#){: .btn .btn--success}
-[Warning Button](#){: .btn .btn--warning}
-[Danger Button](#){: .btn .btn--danger}
-[Info Button](#){: .btn .btn--info}
-[Inverse Button](#){: .btn .btn--inverse}
-[Light Outline Button](#){: .btn .btn--light-outline}
+[Primary Button](#){: .button}
+[Success Button](#){: .button .button--success}
+[Warning Button](#){: .button .button--warning}
+[Danger Button](#){: .button .button--danger}
+[Info Button](#){: .button .button--info}
+[Inverse Button](#){: .button .button--inverse}
+[Light Outline Button](#){: .button .button--light-outline}
 
 ```markdown
-[Primary Button Text](#link){: .btn}
-[Success Button Text](#link){: .btn .btn--success}
-[Warning Button Text](#link){: .btn .btn--warning}
-[Danger Button Text](#link){: .btn .btn--danger}
-[Info Button Text](#link){: .btn .btn--info}
-[Inverse Button](#link){: .btn .btn--inverse}
-[Light Outline Button](#link){: .btn .btn--light-outline}
+[Primary Button Text](#link){: .button}
+[Success Button Text](#link){: .button .button--success}
+[Warning Button Text](#link){: .button .button--warning}
+[Danger Button Text](#link){: .button .button--danger}
+[Info Button Text](#link){: .button .button--info}
+[Inverse Button](#link){: .button .button--inverse}
+[Light Outline Button](#link){: .button .button--light-outline}
 ```
 
-[X-Large Button](#){: .btn .btn--x-large}
-[Large Button](#){: .btn .btn--large}
-[Default Button](#){: .btn}
-[Small Button](#){: .btn .btn--small}
+[X-Large Button](#){: .button .button--x-large}
+[Large Button](#){: .button .button--large}
+[Default Button](#){: .button}
+[Small Button](#){: .button .button--small}
 
 ```markdown
-[X-Large Button](#link){: .btn .btn--x-large}
-[Large Button](#link){: .btn .btn--large}
-[Default Button](#link){: .btn}
-[Small Button](#link){: .btn .btn--small}
+[X-Large Button](#link){: .button .button--x-large}
+[Large Button](#link){: .button .button--large}
+[Default Button](#link){: .button}
+[Small Button](#link){: .button .button--small}
 ```
 
 ## Notices
