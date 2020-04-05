@@ -1,5 +1,9 @@
-facebook_url: '#'
-twitter_url: '#'
+facebook:
+  url: '#'
+  app_id:
+  publisher:
+default_image: # Open Graph/Twitter default site image
+twitter: '#'
 instagram_url: '#'
 tumblr_url: '#'
 youtube_url: '#'
@@ -8,6 +12,3 @@ whatsapp_url: '#'
 linkedin_url: '#'
 medium_url: '#'
 pinterest_url: '#'
-github_username: '#'
-dribbble: '#'
-email: '#'

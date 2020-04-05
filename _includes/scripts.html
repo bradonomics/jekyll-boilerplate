@@ -1,32 +1,132 @@
 {% comment %} Add navigation toggler {% endcomment %}
 <script>
-  document.getElementById('toggle').addEventListener('click', toggler);
-  function toggler(event) {
-    var navigation = document.getElementById('navigation');
-    event.preventDefault();
+document.querySelector('.responsive-menu-icon').addEventListener('click', function(e) {
+  var navigation = document.querySelector('.menu');
 
-    if (!navigation.classList.contains('open')) {
-      navigation.classList.add('open');
-      navigation.style.height = 'auto';
-      var height = navigation.clientHeight + "px";
-      navigation.style.height = '0px';
-      setTimeout(function() {
-        navigation.style.height = height;
-      }, 0);
-    } else {
-      navigation.style.height = '0px';
-      navigation.addEventListener('transitionend', function() {
-        navigation.classList.remove('open');
-      }, {
-        once: true
+  if(navigation.getAttribute('data-collapsed') === 'true') {
+    // get the height of the element's inner content, regardless of its actual size
+    var sectionHeight = navigation.scrollHeight;
+
+    // have the element transition to the height of its inner content
+    navigation.style.height = sectionHeight + 'px';
+
+    // mark the section as "currently not collapsed"
+    navigation.setAttribute('data-collapsed', 'false');
+
+    // mark Aria toggle button expanded as true
+    document.querySelector('.responsive-menu-icon').setAttribute('aria-expanded', 'true');
+
+    // set data-collapsed to false
+    navigation.setAttribute('data-collapsed', 'false')
+  } else {
+    // get the height of the element's inner content, regardless of its actual size
+    var sectionHeight = navigation.scrollHeight;
+
+    // temporarily disable all css transitions
+    var elementTransition = navigation.style.transition;
+    navigation.style.transition = '';
+
+    // on the next frame (as soon as the previous style change has taken effect),
+    // explicitly set the element's height to its current pixel height, so we
+    // aren't transitioning out of 'auto'
+    requestAnimationFrame(function() {
+      navigation.style.height = sectionHeight + 'px';
+      navigation.style.transition = elementTransition;
+
+      // on the next frame (as soon as the previous style change has taken effect),
+      // have the element transition to height: 0
+      requestAnimationFrame(function() {
+        navigation.style.height = 0 + 'px';
       });
+    });
+
+    // mark the section as "currently collapsed"
+    navigation.setAttribute('data-collapsed', 'true');
+
+    // mark Aria toggle button expanded as false
+    document.querySelector('.responsive-menu-icon').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+
+
+{% comment %}
+
+  Full overlay navigation function:
+
+  document.getElementById('toggle').addEventListener('click', toggleMenu);
+  function toggleMenu() {
+
+    var navigation = document.getElementById('navigation');
+    var height = window.getComputedStyle(navigation).getPropertyValue('height');
+
+    if (height == '0px') {
+      navigation.style.height = '100%';
+    } else {
+      navigation.style.height = '0%';
+    }
+
+    if (this.attributes['aria-expanded'].value == 'true') {
+      this.setAttribute('aria-expanded', 'false');
+    } else {
+      this.setAttribute('aria-expanded', 'true');
     }
 
   }
-</script>
+{% endcomment %}
+
+
+{% comment %} Find iframes and wrap them with iframe-embed div {% endcomment %}
+{% if page.video_embed %}
+  <script>
+    // Wrap function
+    HTMLElement.prototype.wrap = function(elms) {
+      // Convert `elms` to an array, if necessary.
+      if (!elms.length) elms = [elms];
+
+      // Loops backwards to prevent having to clone the wrapper on the
+      // first element (see `child` below).
+      for (var i = elms.length - 1; i >= 0; i--) {
+        var child = (i > 0) ? this.cloneNode(true) : this;
+        var el = elms[i];
+
+        // Cache the current parent and sibling.
+        var parent = el.parentNode;
+        var sibling = el.nextSibling;
+
+        // Wrap the element (is automatically removed from its current
+        // parent).
+        child.appendChild(el);
+
+        // If the element had a sibling, insert the wrapper before
+        // the sibling to maintain the HTML structure; otherwise, just
+        // append it to the parent.
+        if (sibling) {
+          parent.insertBefore(child, sibling);
+        } else {
+          parent.appendChild(child);
+        }
+      }
+    };
+
+    // Get all iframes
+    var iframes = document.getElementsByTagName('iframe');
+
+    // Create a div
+    var div = document.createElement('div');
+
+    // Give that div a class
+    div.classList.add('iframe-embed');
+
+    // Pass that div to the wrap function
+    div.wrap(iframes);
+  </script>
+{% endif %}
+
 
 {% comment %} photoSwipe Lightbox scripts {% endcomment %}
 {% if page.lightbox %}
+  <!-- TODO: Probably need to make this conditional based on an array structure -->
   <script src="{{ '/js/photoswipe.min.js' | absolute_url }}"></script>
   <script src="{{ '/js/photoswipe-ui-default.min.js' | absolute_url }}"></script>
   <script>

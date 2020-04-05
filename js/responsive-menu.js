@@ -1,3 +1,5 @@
+// DO NOT USE. Check the _includes/scripts.html file for vanilla JS method.
+// If this is a production site, and you are not using jQuery, you may delete this file.
 jQuery(document).ready(function() {
 
   //* Add main menu button

@@ -1,8 +1,6 @@
 ---
 title: "Markup: HTML Tags and Formatting"
 sidebar_option: sidebar
-header:
-  teaser: "markup-syntax-highlighting-teaser.jpg"
 categories:
   - Markup
 tags:

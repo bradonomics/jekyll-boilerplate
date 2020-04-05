@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Sass files need front matter for Jekyll to process (the dashes are enough)
 ---
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -8,18 +8,13 @@
 @import 'utilities';
 @import 'base';
 @import 'typography';
+@import 'screen-reader';
 @import 'structure';
-@import 'buttons';
-@import 'forms';
-@import 'tables';
 @import 'header';
 @import 'navigation';
-@import 'article';
-@import 'widgets';
+@import 'forms';
 @import 'images';
-@import 'pages/home';
 @import 'archive';
+@import 'pages/home';
 @import 'pagination';
 @import 'sidebar';
-@import 'footer-widgets';
-@import 'footer';

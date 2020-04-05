@@ -1,13 +1,11 @@
 # Site Settings
-title: Jekyll Boilerplate
-description: Boilerplate code for new Jekyll themes.
 url:
 
 # Jekyll Configuration
 encoding: UTF-8
 permalink: /:title/
 paginate: 5
-paginate_path: "/blog/page/:num/"
+paginate_path: "/blog/page-:num/"
 
 # Markdown Processing
 markdown: kramdown
@@ -37,7 +35,7 @@ autoprefixer:
   only_production: true
 
 # File Handling
-# include: [_pages]
+include: [_pages]
 exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]
 
 # Archives

@@ -1,9 +1,10 @@
 ---
-title: About Jekyll Boilerplate
+title: About Bedrock
+seo_title:
 description:
 featured_image:
-facebook_image:
 permalink: /about/
+_disable_title_filename_sync: true
 ---
 
 ## So what is Jekyll, exactly?

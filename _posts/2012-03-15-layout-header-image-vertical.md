@@ -1,8 +1,6 @@
 ---
 title: "Layout: Header Image (Vertical)"
-header:
-  image: unsplash-image-6.jpg
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+featured_image: /images/unsplash-image-3.jpg
 categories:
   - Layout
   - Uncategorized

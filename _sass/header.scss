@@ -1,5 +1,5 @@
 .site-header {
-  @extend %row;
+  @extend .row; // in utilities.scss
   flex-direction: column;
   @include breakpoint(md) {
     flex-direction: row;

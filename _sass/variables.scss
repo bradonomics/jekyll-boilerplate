@@ -1,40 +1,25 @@
 $body-font: Raleway, HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$primary-color: #1eaedb;
+$secondary-color: #fff;
 $body-text-color: #454545;
 
-$primary-color: #1eaedb;
-$primary-color-hover: #0fa0ce;
-
-$secondary-color: #fff;
-$secondary-color-hover: #fff;
-
-$button-text-color: #fff;
-$button-text-color-hover: #fff;
-
-$button-background-color: #33c3f0;
-$button-background-color-hover: #1eaedb;
-
 $font-size-base: 1.25rem !default;
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: 3.125rem !default;
+$h2-font-size: 2.5rem !default;
+$h3-font-size: 2.1875rem !default;
+$h4-font-size: 1.875rem !default;
+$h5-font-size: 1.5625rem !default;
+$h6-font-size: 1.25rem !default;
 
 $spacer: 1rem;
 
+// Breakpoints need to be em values and calculated from a 16px base to match their calulated equivelents.
 $grid-breakpoints: (
-  // xs: 0,
-  // sm: 550px,
-  // md: 750px,
-  // lg: 1000px,
-  // xl: 1200px,
-  // xxl: 1340px
   xs: 0,
-  sm: 27.5rem,
-  md: 37.5rem,
-  lg: 50rem,
-  xl: 60rem,
-  xxl: 67rem
+  sm: 34.375em, // ~550px
+  md: 46.875em, // ~750px
+  lg: 62.5em,   // ~1000px
+  xl: 75em,     // ~1200px
+  xxl: 83.75em  // ~1340px
 ) !default;

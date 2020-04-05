@@ -1,14 +1,24 @@
 {
   "name": "jekyll-boilerplate",
-  "version": "2.0.0",
   "description": "Jekyll boilerplate is a starter kit for Jekyll themes.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bradonomics/jekyll-boilerplate.git"
-  },
+  "version": "3.0.0",
   "author": "Brad West",
   "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/bradonomics/jekyll-boilerplate.git"
+  },
   "bugs": {
     "url": "https://github.com/bradonomics/jekyll-boilerplate/issues"
+  },
+  "engines": {
+    "node": ">= 12.16.1"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.6.1",
+    "jquery": "^3.4.1"
+  },
+  "scripts": {
+    "uglify": "npm run uglifyjs node_modules/jquery/dist/jquery.js js/responsive-menu.js -c -m -o js/bedrock.min.js"
   }
 }

@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<article class="page">
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 
   <div class="archive-description">
-    <h1 class="archive-title">
+    <h1 class="archive-title" itemprop="headline">
       {{ page.title }}
       {% if page.type == 'category' %} Category Archives{% endif %}
       {% if page.type == 'tag' %} Tag Archives{% endif %}
@@ -14,17 +14,17 @@ layout: default
 
   {% for post in page.posts %}
 
-  <article class="post entry">
+  <article class="post entry" itemscope itemtype="https://schema.org/CreativeWork">
 
     <header class="entry-header">
-      <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
-      <p class="entry-meta"><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
+      <h1 class="entry-title" itemprop="headline"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h1>
+      <p class="entry-meta"><time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
     </header>
 
     <div class="entry-content">
-      {% if post.featured_image %}<a class="entry-image-link" href="{{ post.url }}" aria-hidden="true"><img width="1024" height="682" src="{{ post.featured_image }}" class="post-image entry-image" alt="{{ post.title }}"></a>{% endif %}
-      <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
-      <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
+      {% if post.featured_image %}<a class="entry-image-link" href="{{ post.url | absolute_url }}" aria-hidden="true" tabindex="-1"><img class="entry-image" src="{{ post.featured_image | absolute_url }}" alt="{{ post.title }}" itemprop="image"></a>{% endif %}
+      <p itemprop="text">{{ post.content | strip_html | strip | truncate: 440 }}</p>
+      <p><a class="entry-link" href="{{ post.url | absolute_url }}">Continue Reading</a></p>
     </div>
 
   </article>
